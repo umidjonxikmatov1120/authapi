@@ -22,9 +22,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('profile.urls')),
 
-    path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),
-    path('api/v1/dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
+    path('api/v1/dj-rest-profile/', include('dj_rest_auth.urls')),
+    path('api/v1/dj-rest-profile/registration/', include('dj_rest_auth.registration.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
