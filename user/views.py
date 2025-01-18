@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST
 from rest_framework.views import APIView
 
-from profile.serializers import RegisterSerializer, UserSerializer
+from user.serializers import RegisterSerializer, UserSerializer
 
 User = get_user_model()
 
